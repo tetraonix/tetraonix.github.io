@@ -2132,6 +2132,26 @@ p {
   grid-column: 1 / -1;
 }
 
+.formStatus {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 4px;
+  font-weight: 800;
+}
+
+.formStatusSuccess {
+  border: 1px solid rgba(23, 123, 84, 0.24);
+  color: #105d3d;
+  background: #e9f8f1;
+}
+
+.formStatusError {
+  border: 1px solid rgba(193, 31, 62, 0.24);
+  color: #9b1931;
+  background: #fff1f4;
+}
+
 .workflow {
   display: grid;
   grid-template-columns: repeat(5, 1fr);

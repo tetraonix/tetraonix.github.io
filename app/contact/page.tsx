@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContactInquiryForm from '@/components/ContactInquiryForm';
 import JsonLd from '@/components/JsonLd';
 import { absoluteUrl, createMetadata, siteConfig } from '@/lib/seo';
 
@@ -73,43 +74,7 @@ export default function ContactPage() {
           <div className="contact-form-shell">
             <span className="eyebrow">Tell us where to start</span>
             <h2>What should Tetraonix help you move forward?</h2>
-            <form className="field-grid" action="mailto:contact@tetraonix.com" method="post" encType="text/plain">
-              <div className="field">
-                <label htmlFor="name">Name</label>
-                <input id="name" name="name" type="text" />
-              </div>
-              <div className="field">
-                <label htmlFor="email">Email</label>
-                <input id="email" name="email" type="email" />
-              </div>
-              <div className="field">
-                <label htmlFor="interest">Interest</label>
-                <select id="interest" name="interest" defaultValue="">
-                  <option value="" disabled>Select an area</option>
-                  <option>QA Platform</option>
-                  <option>HRMS</option>
-                  <option>AI automation</option>
-                  <option>Cloud or support</option>
-                  <option>Staffing or delivery team</option>
-                </select>
-              </div>
-              <div className="field">
-                <label htmlFor="timeline">Timeline</label>
-                <select id="timeline" name="timeline" defaultValue="">
-                  <option value="" disabled>Select timing</option>
-                  <option>Now</option>
-                  <option>This quarter</option>
-                  <option>Planning ahead</option>
-                </select>
-              </div>
-              <div className="field field-full">
-                <label htmlFor="message">Message</label>
-                <textarea id="message" name="message" />
-              </div>
-              <div className="field field-full">
-                <button className="btn btn-primary" type="submit">Send inquiry</button>
-              </div>
-            </form>
+            <ContactInquiryForm />
           </div>
         </div>
       </section>
